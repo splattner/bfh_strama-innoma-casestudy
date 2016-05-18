@@ -1,24 +1,104 @@
 \chapter{Markt}
-\label{chap:markt}
 
-\section{Markpotential}
+\section{Produkt}
+\label{sec:product}
+
+Haushaltsgeräte sollen heutzutage nicht mehr nur langweilige Geräte sein, welche eine einfache Aufgabe erfüllen. Kühlschränke sind beispielsweise nicht mehr nur Kühlgeräte. Sie denken mit und unterstützen den Besitzer bei den nötigen Einkäufen oder nehmen ihm sogar solche Aufgaben ab. So soll es auch mit der Toilette sein. Es gibt schon zahlreiche Produkte welche den Comfort der Toilettenbesucher erhöhen. Dies ist allerdings nicht das Ziel des Produktes. Smoilet soll Informationen zur Benutzung der Toilette liefern. Die Bedürfnisse unserer Abnehmer lassen sich in folgende Kategorien unterteilen:
+
+\begin{itemize}
+	\item Ökologisch: Interesse an den Auswirkungen der Toilette auf die Umwelt.
+	\item Wirtschaftlich: Mögliches Sparpotenzial.
+	\item Wartung: Materialverbrauch, Abnützung.
+	\item Just for fun: Basteleien.
+\end{itemize}
+
+Diese Bedürfnisse sollen alle komplett oder zum Teil durch unser Produkt abgedeckt werden.
+
+\subsection{Produktdifferenzierung}
+
+Es gibt bereits zahlreiche Gadgets für die eigene Toilette zu kaufen. Die im Kapitel \ref{sec:product} beschriebenen Bedürfnisse werden aber nicht oder kaum abgedeckt. Einzelne Prototypen wurden zwar schon entwickelt \cite{website:shithappens} \cite{website:miketoilet} \cite{website:hacklabtoilet}, sind aber alle nicht für den einfachen Toilettenbesitzer zugänglich. Aktuell sehen wir keine kommerziellen Projekte welche im gleichen Bereich wie Smoilet 2.0 tätig sind. Es gibt diverse Hobbyprojekte die sich im gleichen Bereich wie Smoilet 2.0 bewegen. Insbesondere das Projekt von Liz Upton von der Raspberry Pi Foundation hat in einem Blog Beitrag \cite{website:iottoilet} über die Anbindung einer Toilette um auf Spühlung sowie den Wechsel von WC-Papier zu reagieren. Ansonsten sind keine weiteren nennenswerten Projekte in diesem Bereich vorhanden.
+
+\subsection{Produktgestaltung}
+
+Im Brainstorming haben wir mehrere mögliche Lösungswege ausgearbeitet, dieser Abschnitt zeigt drei mögliche Wege auf, wägt sie ab und begründet den Weg den wir nehmen wollen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{bilder/durchfluss}
+	\caption{Durchfluss: Der Sensor wird in der Toilette installiert und misst Feuchtigkeit oder Wasserdurchfluss.}
+	\label{fig:durchfluss}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{bilder/taster}
+	\caption{Taster: Der Sensor wird auf den Taster der Toilette geklebt und ermittelt den Tastendruck kapazitiv.}
+	\label{fig:taster}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{bilder/akustisch}
+	\caption{Akustisch: Der Sensor wird an die Schüssel geklebt und misst über ein Mikrofon das Rauschen des Spülvorganges.}
+	\label{fig:akustisch}
+\end{figure}
+
+In der Gegenüberstellung vergeben wir für verschiedene Kriterien die Punkte:
+
+\begin{equation}
+\{-1 \dots 1\} \text{ wobei } \begin{cases}
+-1,	& \text{Unpassend, kompliziert, umständlich}  \\
+0,  & \text{Neutral} \\
+1,  & \text{Optimal, ideal, sehr einfach}
+\end{cases}
+\end{equation}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r|ccc}
+		\centering
+		\textbf{Kriterium} & Durchfluss & Taster & Akustisch \\ \midrule
+		Installation & 1 & 1 & 1\\
+		Deinstallation & -1 & 0 & 1\\
+		Stromverbrauch & 1 & 1 & 0\\
+		Verschleiss & -1 & 0 & 1 \\
+		Hygiene & 0 & 0 & -1\\
+		Handhabung & 0 & 0 & 0\\
+		Komplexität Umsetzung & -1 & 0 & 1\\
+		\midrule
+		& -1 & 2 & 3 \\
+	\end{tabular}
+	\caption{Gegenüberstellung}
+	\label{tab:gegenueberstellung}
+\end{table}
+
+Gemäss Tabelle \ref{tab:gegenueberstellung} haben wir uns für die Variante Akustisch entschieden. Diese Variante dominiert da sie sehr einfach zu handhaben und technisch umzusetzen ist. Ein weiterer Vorteil der Lösung ist das sie Keine beweglichen Teile beinhaltet und der Ersatz beziehungsweise die Deinstallation genau so simpel wie die Installation ist.
+
+\subsection{Produktvarianten}
+
+\paragraph{Endkundenvariante}
+
+Die Endkundenvariante muss einfach und mit wenigen Handgriffen in eine bestehende Toilette montiert werden können. Das äusssere Erscheinungsbild der Endkundenvariante muss schlicht und ästhetisch sein. Damit passt Smoilet 2.0 optisch elegant zu einer bestehenden Toilette. Smoilet 2.0 in der Endkundenvariante soll möglichst unsichtbar an der Toilette angebracht werden können.
+
+\paragraph{OEM Variante}
+
+Die OEM Variante im Gegensatz zur Endkundenvariante muss optisch keine Anforderungen erfüllen. Sie wird direkt ab Werk in ein Toilettensystem eingebaut und somit optimal integriert. Der Einbau von Smoilet 2.0 wird durch eine Fachperson erledigt die gezielt geschult werden kann. Somit müssen Kriterien wie, z.B. der einfache Einbau, nicht zwingend erfüllt werden. Dies hat zur Folge, dass die OEM Variante etwas günstiger produziert werden kann.
+
+\section{Place}
 
 Weltweit haben ca. 40\% Zugang zu einer Spültoilette, bei einer ungefähren Bevölkerung von etwa 7 Milliarden Personen, ergibt das etwa 2.8 Milliarden Personen mit Zugang zu einer Spültoilette. Wenn wir annehmen, dass alle Haushalte mindestens eine Toilette haben, plus alle Toiletten in Geschäften, Schulen, öffentlichen Gebäuden, gibt das min. eine Toilette pro zwei Personen. Somit gibt es weltweit ca 1.4 Milliarden Toiletten.
 
 Als Markt werden Länder angestrebt mit einem hohen Interesse an Technologie. Zu beginn konzentrieren wir uns auf die deutschsprachigen Länder:
 
 \begin{itemize}
-\item Schweiz (ca. 8 Millionen)
-\item Deutschland (ca. 80 Millionen)
-\item Österreich (ca 8.5 Millionen)
+	\item Schweiz (ca. 8 Millionen)
+	\item Deutschland (ca. 80 Millionen)
+	\item Österreich (ca 8.5 Millionen)
 \end{itemize}
 
-Das ergibt Total ca. 96 Millionen Einwohner. Wenn wir uns das Alterssegment zwischen 20 und 39 Jahren anschauen (In der Schweiz sind das gemäss BFS \footnote{\url{http://www.bfs.admin.ch/bfs/portal/de/index/themen/01/02/blank/key/alter/gesamt.html}} ca. 25\% der Bevölkerung) bleiben ca. 24 Millionen Einwohner übrig.
-Wir denken das Smoilet 2.0 hauptsächlich von Techniker oder Personen mit gleichrangigen berufen benutzt wird. Gemäss BFS \footnote{\url{http://www.bfs.admin.ch/bfs/portal/de/index/themen/01/07/blank/ind43.indicator.43052.430108.html}} sind das ca 20\% und somit ca 5. Millionen Einwohner.
+Das ergibt Total ca. 96 Millionen Einwohner. Wenn wir uns das Alterssegment zwischen 20 und 39 Jahren anschauen (In der Schweiz sind das gemäss BFS \cite{website:bfsalter} ca. 25\% der Bevölkerung) bleiben ca. 24 Millionen Einwohner übrig. Wir denken das Smoilet 2.0 hauptsächlich von Techniker oder Personen mit gleichrangigen berufen benutzt wird. Gemäss BFS \cite{website:bfsarbeitsmarkt} sind das ca 20\% und somit ca 5. Millionen Einwohner. Das ergibt mit den oben genannten Zahlen (min. eine Toilette pro zwei Personen) etwa 2.5 Millionen Toiletten.
 
-Das ergibt mit den oben genannten Zahlen (min. eine Toilette pro zwei Personen) etwa 2.5 Millionen Toiletten.
-
-\section{Marktanteil}
+\subsection{Marktanteil}
 
 Für unsere Crowdfunding Kampagne streben wir den Verkauf von 10'000 Smoilet 2.0 Geräten an (0.4\% Marktanteil).
 Anschliessend planen wir einen Wachstum von 50\% pro Jahr.
@@ -31,17 +111,16 @@ Das ergibt folgende Marktanteile.
 
 % Todo Make Table!
 
-\section{Bedürfnisse}
+\section{Promotion}
 
-Haushaltsgeräte sollen heutzutage nicht mehr nur langweilige Geräte sein, welche eine einfache Aufgabe erfüllen. Kühlschränke sind beispielsweise nicht mehr nur Kühlgeräte. Sie denken mit und unterstützen den Besitzer bei den nötigen Einkäufen oder nehmen ihm sogar solche Aufgaben ab. So soll es auch mit der Toilette sein. Es gibt schon zahlreiche Produkte welche den Comfort der Toilettenbesucher erhöhen. Dies ist allerdings nicht das Ziel des Produktes. Smoilet soll Informationen zur Benutzung der Toilette liefern. Die Bedürfnisse unserer Abnehmer lassen sich in folgende Kategorien unterteilen:
-\begin{itemize}
-\item Ökologisch: Interesse an den Auswirkungen der Toilette auf die Umwelt.
-\item Wirtschaftlich: Mögliches Sparpotenzial.
-\item Wartung: Materialverbrauch, Abnützung.
-\item Just for fun: Basteleien.
-\end{itemize}
+\paragraph{Direkter Absatz}
 
-Diese Bedürfnisse können alle komplett oder zum Teil durch unser Produkt abgedeckt werden.
+Smoilet 2.0 ist ein Produkt für Toilettenenthusiasten aus aller Welt. Als Distributionskanal wird aus diesem Grund eine E-Commerce Plattformen gewählt. Die E-Commerce Plattform ist ein einfacher simpler Web-Auftritt auf dem die Endkundenvariante von Smoilet 2.0 gekauft werden kann. Über diese Plattform wird die Endkundenvariante von Smoilet 2.0 vertrieben. Auf Beratungen des Kunden vor Ort wird momentan verzichtet. Es wird auf eine schnell wachsende Comunity gesetzt, welche Hilfe und möglichen Anwendungen online austauscht. Dazu stellen wir auf der E-Commerce Plattform ein Forum zur Verfügung.
 
-\section{Konkurrenz}
-Es gibt bereits zahlreiche Gadgets für die eigene Toilette zu kaufen. Die oben Beschriebenen Bedürfnisse werden aber nicht oder kaum abgedeckt. Einzelne Prototypen wurden zwar schon entwickelt, sind aber nicht für den einfachen Toilettenbesitzer zugänglich (https://twitter.com/shithappen, https://twitter.com/miketoilet, https://twitter.com/hacklabTOilet). 
+\paragraph{Indirekter Absatz}
+
+Weiter wird die Endkundenvariante in Bau\&Hobby Geschäften für Endkunden vertrieben und über den Online Handel auf E-Commerce Plattformen mit Produkten im Bereich Heimautomatisierung und IoT vertrieben.
+
+Die OEM Variante wird durch einen Partner direkt in einem bestehenden Toilettensystem eingebaut. In dieser Variante wird Smoilet 2.0 über die Kanäle des Partner ausgeliefert. OEM Partner können Smoilet 2.0 in einem abgetrennten Bereich unsere E-Commerce Plattform beziehen.
+
+\section{Price}
