@@ -1,62 +1,38 @@
 \chapter{Produkt}
 \label{chap:produkt}
 
-Dieses Kapitel hat zum Ziel das Produkt genauer zu definieren.
-
-\section{Need}
-\label{sec:need}
-
-\section{Approach}
-\label{sec:apporach}
-
-Im Brainstorming haben wir mehrere mögliche Lösungswege ausgearbeitet, dieser Abschnitt zeigt drei Wege auf, wägt sie ab und  begründet den Weg den wir nehmen wollen.
-
-\subsection{Durchfluss}
-\label{ssec:durchfluss}
-
-Der Sensor wird in der Toilette installiert und misst Feuchtigkeit oder Wasserdurchfluss.
+Dieses Kapitel hat zum Ziel das Produkt Smoilet 2.0 genauer zu definieren. Im Brainstorming haben wir mehrere mögliche Lösungswege ausgearbeitet, dieser Abschnitt zeigt drei mögliche Wege auf, wägt sie ab und begründet den Weg den wir nehmen wollen.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{bilder/durchfluss}
-	\caption{Durchflusssensor}
+	\caption{Durchfluss: Der Sensor wird in der Toilette installiert und misst Feuchtigkeit oder Wasserdurchfluss.}
 	\label{fig:durchfluss}
 \end{figure}
-
-\subsection{Taster}
-\label{ssec:taster}
-
-Der Sensor wird auf den Taster der Toilette geklebt und ermittelt den Tastendruck kapazitiv.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{bilder/taster}
-	\caption{Kapazitiver Taster}
+	\caption{Taster: Der Sensor wird auf den Taster der Toilette geklebt und ermittelt den Tastendruck kapazitiv.}
 	\label{fig:taster}
 \end{figure}
-
-\subsection{Akustisch}
-\label{ssec:taster}
-
-Der Sensor wird an die Schüssel geklebt und misst über ein Mikrofon das Rauschen des Spülvorganges.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{bilder/akustisch}
-	\caption{Akustisch}
+	\caption{Akustisch: Der Sensor wird an die Schüssel geklebt und misst über ein Mikrofon das Rauschen des Spülvorganges.}
 	\label{fig:akustisch}
 \end{figure}
 
-\subsection{Gegenüberstellung}
-\label{ssec:gegenüberstellung}
+\section{Gegenüberstellsung}
+\label{sec:gegenueberstellung}
 
 In der Gegenüberstellung vergeben wir für verschiedene Kriterien die Punkte: \\
 \begin{equation}
-0 \dots 3
-\begin{cases}
+\{-1 \dots 1\} \text{ wobei } \begin{cases}
 -1,	& \text{Unpassend, kompliziert, umständlich}  \\
 0,  & \text{Neutral} \\
-1,  & \text{Optimal, ideal, sehr einfach} \\
+1,  & \text{Optimal, ideal, sehr einfach}
 \end{cases}
 \end{equation}
 
@@ -78,4 +54,6 @@ In der Gegenüberstellung vergeben wir für verschiedene Kriterien die Punkte: \\
 	\caption{Gegenüberstellung}
 	\label{tab:gegenueberstellung}
 \end{table}
+
+Gemäss Tabelle \ref{tab:gegenueberstellung} haben wir uns für die Variante Akustisch entschieden. Diese Variante dominiert da sie sehr einfach zu handhaben und technisch umzusetzen ist. Ein weiterer Vorteil der Lösung ist das sie Keine beweglichen Teile beinhaltet und der Ersatz beziehungsweise die Deinstallation genau so simpel wie die Installation ist.
 
