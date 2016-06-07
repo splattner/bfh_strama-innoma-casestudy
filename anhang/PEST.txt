@@ -1,0 +1,26 @@
+PEST Analyse 
+
+Political 
+------------------------------------
+Datenschutz 
+Die smoilet 2.0 verletzt keine Datenschutzbestimmungen des DSG (Bundesgesetz über Datenschutz vom 19. Juni 1992 Stand am 1. Januar 2014) oder der Europäischen Datenschutz-Grundverordnung (Richtlinie 95/46/EG des Europäischen Parlaments und des Rates vom 24. Oktober 1995 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr)
+
+Installationsvorschriften
+Die smoilet 2.0 überschreitet die Grenzwerte für den Spannungsbereich I (Kleinspannung = 50V) nach IEC60449 nicht und kann somit gemäss NIN und VDE 0100 im Bad-, Dusch- und Toilettenbereich eingesetzt werden.
+
+Kommunikation 
+Die smoilet 2.0 wird im ISM Band betrieben und sendet mit weniger als 100 mW und verletzt somit weder Nationale noch Internationale Autoritäten. 
+
+Economic
+------------------------------------
+Grundvoraussetzung für die smoilet 2.0 ist eine Toilette mit einer Spülvorrichtung, Internet und Elektrizität. Ein potentieller Absatzmarkt existiert somit nur in hoch technologisierten, kaufkräftigen Nationen. 
+
+Social 
+------------------------------------ 
+In vielen Gesellschaften gilt die Toilette als Ort der Stille. Damit sich der Benutzer auf keinen Fall beobachtet fühlt, ist es möglich die smoilet 2.0 äussert diskret zu montieren. 
+Der Focus ist auf Gesellschaften zu legen, wie beispielweise Japan, welche grosse Vorlieben haben für Gadgets auch / oder besonders auf dem WC. 
+
+Technological
+------------------------------------
+Die smoilet 2.0 verwendet hoch standardisierte Technologien wie Bluetooth LE und bedarf Bluetooth AP, welcher mit dem Internet verbunden ist.
+In einer späteren Generation der smoilet 2.0 ist zu prüfen, ob diese in ein Funknetz wie LoRa (Long Range) der Swisscom betrieben werden kann. Funknetze wie LoRa, sind spezialisiert auf IOT Applikationen ausgelegt, welche Dingen (Things), wie der smoilet 2.0, eine Schnittstelle ins Internett zu bietet. Der Vorteil in dieser Technologie liegt darin, dass eine Sender/Empfänger mit sehr wenig Energie betrieben werden kann. Dies erlaubt eine längere Betriebszeit mit beispielsweise einer Batterie. 
